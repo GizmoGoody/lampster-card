@@ -22,7 +22,7 @@
 const CARD_TYPE = "lampster-card";
 const EDITOR_TYPE = "lampster-card-editor";
 const TILE_EDITOR_TYPE = "lampster-tile-card-editor";
-const VERSION = "1.1.0";
+const VERSION = "1.0.0";
 
 // ---------------------------------------------------------------------------
 // Options
