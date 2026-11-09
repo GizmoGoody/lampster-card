@@ -2,6 +2,8 @@
 
 A dashboard card for [The Lampster](https://github.com/yamanote1138/lampster-ha-integration) RGB Bluetooth lamp in Home Assistant. It began as part of [GizmoGoody's fork](https://github.com/GizmoGoody/lampster-ha-integration) of that integration and moved here when the integration's maintainer chose to keep that repository focused on the integration.
 
+![The Lampster card in rusted metal with rivets, a lens, effects and color keys](docs/card.png)
+
 The card needs the [The Lampster integration](https://github.com/yamanote1138/lampster-ha-integration), which provides the light it controls.
 
 ## Install
