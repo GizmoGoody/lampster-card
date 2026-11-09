@@ -1387,7 +1387,7 @@ if (!customElements.get(CARD_TYPE)) {
     name: "The Lampster",
     description: "A tile card for The Lampster, in a metal or Lampster finish with fasteners.",
     preview: true,
-    documentationURL: "https://github.com/yamanote1138/lampster-ha-integration#dashboard-card",
+    documentationURL: "https://github.com/GizmoGoody/lampster-card#readme",
   });
   console.info(`%c THE LAMPSTER CARD %c ${VERSION} `, "color: #fff; background: #555; font-weight: bold", "color: #fff; background: #e0201b");
 }
