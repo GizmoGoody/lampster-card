@@ -1,0 +1,26 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  hacs:
+    name: HACS validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hacs/action@main
+        with:
+          category: plugin
+          # Topics, description and issues are repository settings, not code
+          ignore: brands topics
+
+  card:
+    name: Card test pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The test pages run in headless Chrome, which the runner includes
+      - name: Run the card test pages
+        run: python3 tests/card/run_card_tests.py
