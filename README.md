@@ -8,11 +8,16 @@ The card needs the [The Lampster integration](https://github.com/yamanote1138/la
 
 ## Install
 
-1. In HACS, open the menu (⋮) → **Custom repositories**, add `https://github.com/GizmoGoody/lampster-card` with the type **Dashboard**, and select **Add**.
-2. Search for **The Lampster card** and select **Download**.
-3. Reload the browser page (in the Companion app, pull down to refresh).
+Home Assistant 2026.11 and later include the Marketplace, which replaces HACS. The card needs a Home Assistant version with the Marketplace, or HACS on an older one.
 
-HACS adds the card to **Settings** → **Dashboards** → **Resources** for you. To add the card, edit a dashboard, select **Add card**, and search for **The Lampster**.
+1. Go to **Settings** → **Marketplace**. On the first visit, select **I understand the risks and agree**.
+2. In the upper-right corner, select **Add from link**, enter `GizmoGoody/lampster-card` under **GitHub link**, and select **Add**. If asked for the type, choose the dashboard type.
+3. Open **The Lampster card** and select **Install**, then **Install** again in the dialog.
+4. Reload the browser page (in the Companion app, pull down to refresh).
+
+The Marketplace adds the card to **Settings** → **Dashboards** → **Resources** for you. To add the card, edit a dashboard, select **Add card**, and search for **The Lampster**.
+
+Adding a repository from a link needs a connection to GitHub, which the Marketplace asks for the first time. With HACS on an older Home Assistant, use ⋮ → **Custom repositories**, add the same address with the type **Dashboard**, then select **Download**.
 
 If you used the card that was built into the fork of the integration, remove its old resource at `/lampster/lampster-card.js` from **Settings** → **Dashboards** → **Resources** once you have installed this one.
 
@@ -68,9 +73,9 @@ The editor writes every option the chosen style uses into the YAML, defaults inc
 
 ### The card shows "Custom element does not exist"
 
-- Check that **Settings** → **Dashboards** → **Resources** lists the card as a JavaScript module. HACS adds it when you download the card.
+- Check that **Settings** → **Dashboards** → **Resources** lists the card as a JavaScript module. The Marketplace adds it when you install the card.
 - Reload the browser page once. A dashboard opened before the card was available can keep showing the error until then.
-- If your dashboard resources are defined in YAML (`lovelace:` `resource_mode: yaml`), add the resource yourself:
+- If your dashboard resources are defined in YAML (`lovelace:` `resource_mode: yaml`), the Marketplace cannot add the resource. Its install dialog shows the resource to add. The older address below also still works:
 
 ```yaml
 lovelace:
